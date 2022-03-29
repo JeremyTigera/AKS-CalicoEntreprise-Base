@@ -2,7 +2,7 @@
 This is the walkthrough to install a fresh Calico Entreprise in a newly deployed AKS
 
 ## Resources needed
-Calico related documentations:
+Calico Entreprise documentations:
 https://docs.tigera.io/about/about-calico-enterprise
 
 Azure portal:

@@ -67,3 +67,10 @@ Check if the _StorageClass_ has been created:
 ```
 kubectl get storageclass tigera-elasticsearch
 ```
+### Time to deploy the Calico Entreprise's resources or application
+
+Install the Tigera operator and custom resource definitions
+```
+kubectl create -f https://docs.tigera.io/manifests/tigera-operator.yaml
+```
+

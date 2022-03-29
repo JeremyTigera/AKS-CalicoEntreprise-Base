@@ -18,3 +18,16 @@ Start the cluster if not already started and use the Shell button to access it.<
 You can also click on the _Connect_ button in order to get access to your cluster.<br/>
 You will be required to enter your subscription and credentials.<br/>
 
+Check your nodes out:
+```
+kubectl get nodes
+```
+
+Then, you can run the command below to display everything running on your freshly deployed cluster:
+```
+kubectl get all -A
+```
+
+>If you deployed the cluster with Calico Open Source, you will notice the _calico-system_ namespace.
+
+Now everything is ready, we can proceed to the **Calico Entreprise** installation.

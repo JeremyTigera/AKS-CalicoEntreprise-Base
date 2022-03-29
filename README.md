@@ -77,3 +77,23 @@ Install the Prometheus operator and related custom resource definitions
 ```
 kubectl create -f https://docs.tigera.io/manifests/tigera-prometheus-operator.yaml
 ```
+After that we have to create a config.json file and insert a secret.<br/>
+Create a config.json file in the current directory:
+```
+vi config.json
+```
+Install your pull secret - referencing the same config.json file:
+```
+kubectl create secret generic tigera-pull-secret --type=kubernetes.io/dockerconfigjson -n tigera-operator --from-file=.dockerconfigjson=config.json
+```
+Install the AKS-specific custom resources
+```
+kubectl create -f https://docs.tigera.io/manifests/aks/custom-resources.yaml
+```
+Check the tigera status out using this command:
+```
+kubectl get tigerastatus
+```
+You can use _watch kubectl get tigerastatus_ or _kubectl get tigerastatus -w_ and wait until everything is ready.
+The installation time can be from 5 to 30 minutes.
+

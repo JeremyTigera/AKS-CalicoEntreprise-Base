@@ -31,3 +31,35 @@ kubectl get all -A
 >_If you deployed the cluster with Calico Open Source, you will notice the __calico-system__ namespace._
 
 Now everything is ready, we can proceed to the **Calico Entreprise** installation.
+
+## Installing Calico Entreprise on AKS
+
+Prepare the log storage type for Calico Entreprise, we will use GCE Persistent Disks.<br/>
+In order to do it you can create a yaml manifest called storageclasscalico.yaml<br/>
+```
+vi storageclasscalico.yaml
+```
+Copy Paste this manifest:
+```
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: tigera-elasticsearch
+provisioner: kubernetes.io/azure-file
+mountOptions:
+  - uid=1000
+  - gid=1000
+  - mfsymlinks
+  - nobrl
+  - cache=none
+parameters:
+  skuName: Standard_LRS
+reclaimPolicy: Retain
+volumeBindingMode: WaitForFirstConsumer
+allowVolumeExpansion: true
+```
+
+Apply the manifest:
+```
+kubectl apply -f storageclasscalico.yaml
+```

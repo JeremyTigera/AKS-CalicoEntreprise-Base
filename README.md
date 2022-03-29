@@ -11,7 +11,7 @@ https://portal.azure.com/#home
 How to deploy an Azure Kubernetes cluster:
 https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal
 
->You can create the AKS Cluster with Calico Open Source CNI.
+>_You can create the AKS Cluster with Calico Open Source CNI._
 
 ## Verifying the Cluster health
 

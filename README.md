@@ -28,6 +28,6 @@ Then, you can run the command below to display everything running on your freshl
 kubectl get all -A
 ```
 
->If you deployed the cluster with Calico Open Source, you will notice the _calico-system_ namespace.
+>_If you deployed the cluster with Calico Open Source, you will notice the __calico-system__ namespace._
 
 Now everything is ready, we can proceed to the **Calico Entreprise** installation.

@@ -105,5 +105,5 @@ In order to use Calico Enterprise, you must install the license provided to you 
 ```
 kubectl apply -f license.yaml
 ```
-You can now monitor progress of the _tigerastatus_ seens previously.
+You can now monitor the progress of the _tigerastatus_ seens previously.
 

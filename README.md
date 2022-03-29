@@ -63,3 +63,7 @@ Apply the manifest:
 ```
 kubectl apply -f storageclasscalico.yaml
 ```
+Check if the StorageClass has been created:
+```
+kubectl get storageclass tigera-elasticsearch
+```

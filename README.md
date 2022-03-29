@@ -8,4 +8,10 @@ https://docs.tigera.io/about/about-calico-enterprise
 Azure portal:
 https://portal.azure.com/#home
 
-## Deploy a new AKS Cluster within an existing resource group
+How to deploy an Azure Kubernetes cluster:
+https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal
+
+>You can create the AKS Cluster with Calico Open Source CNI.
+
+## Verifying the Cluster health
+

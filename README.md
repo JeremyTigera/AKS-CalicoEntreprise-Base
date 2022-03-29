@@ -77,7 +77,8 @@ Install the Prometheus operator and related custom resource definitions
 ```
 kubectl create -f https://docs.tigera.io/manifests/tigera-prometheus-operator.yaml
 ```
-After that we have to create a config.json file and insert a secret.<br/>
+Now we have to license the product, refer to your Tigera representative to get the document.
+We have to create a config.json file and insert the token.<br/>
 Create a config.json file in the current directory:
 ```
 vi config.json
@@ -94,6 +95,15 @@ Check the tigera status out using this command:
 ```
 kubectl get tigerastatus
 ```
-You can use _watch kubectl get tigerastatus_ or _kubectl get tigerastatus -w_ and wait until everything is ready.
-The installation time can be from 5 to 30 minutes.
+You can use _watch kubectl get tigerastatus_ or _kubectl get tigerastatus -w_ and wait until everything is ready.<br/>
+
+Create the license file so we can apply the update
+```
+vi license.yaml
+```
+In order to use Calico Enterprise, you must install the license provided to you by Tigera, copy paste the license in the _license.yaml_ file and then apply the manifest.
+```
+kubectl apply -f license.yaml
+```
+You can now monitor progress of the _tigerastatus_ seens previously.
 

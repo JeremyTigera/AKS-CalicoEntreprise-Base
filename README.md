@@ -67,10 +67,13 @@ Check if the _StorageClass_ has been created:
 ```
 kubectl get storageclass tigera-elasticsearch
 ```
-### Time to deploy the Calico Entreprise's resources or application
+**Time to deploy the Calico Entreprise's resources or application**
 
 Install the Tigera operator and custom resource definitions
 ```
 kubectl create -f https://docs.tigera.io/manifests/tigera-operator.yaml
 ```
-
+Install the Prometheus operator and related custom resource definitions
+```
+kubectl create -f https://docs.tigera.io/manifests/tigera-prometheus-operator.yaml
+```
